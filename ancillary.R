@@ -15,7 +15,7 @@ sfpca_img = function(type, observed,train_dat.id,theta,lambda,npc,timepts=NULL,n
   surv_dat$ipcw[is.nan(surv_dat$ipcw)] = 0
   Y_bar = mean(surv_dat$ipcw * surv_dat$logTime, na.rm = T)
   surv_dat$Y_de_mean = surv_dat$logTime - Y_bar
-  
+  surv_dat = surv_dat[match(surv_log$id, surv_dat$id),]
   train_y = surv_dat$Y_de_mean * surv_dat$ipcw 
   
   if (is.null(timepts)) {
