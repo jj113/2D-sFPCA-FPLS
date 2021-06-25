@@ -1,4 +1,4 @@
-sfpca_img = function(type, observed,train_dat.id,theta,lambda,npc,timepts=NULL,ncr){
+sfpca_img = function(type, observed,train_dat.id,theta,npc,timepts=NULL,ncr){
   
   N = nrow(train_dat.id)
   
