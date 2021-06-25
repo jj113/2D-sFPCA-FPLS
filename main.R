@@ -9,7 +9,7 @@ source("ancillary.R")
 n = 400;nnn = 300
 ncr = 32
 npc = 1 # number of basis to pick
-tune_picked = 0 # tunning parameter, pre-specified in this example
+tune_picked = 0.01 # tunning parameter, pre-specified in this example
 train_dat.id = tdat.id = read_rds('train_dat')
 test_dat.id = read_rds('test_dat')
 
@@ -22,7 +22,7 @@ for(i in 1:nrow(train_dat.id)){
 }
 
 sup_fun = sfpca_img(type = "fourier", observed = img.list, train_dat.id = train_dat.id,
-                    theta = tune_picked, lambda = 0, npc = npc, ncr = ncr)
+                    theta = tune_picked, npc = npc, ncr = ncr)
 
 o_tfs = sup_fun[[1]]
 
