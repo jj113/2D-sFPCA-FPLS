@@ -1,6 +1,6 @@
 # 2D-sFPCA-FPLS
 
-main.R: Code to conduct prediction with imaging data with the option of calling FPLS or sFPCA
+main.R: Main function used to conduct prediction with imaging data with the option of calling FPLS or sFPCA
 
 train_dat: Sample dataset used for training the model 
 
